@@ -1,0 +1,235 @@
+/** @format */
+
+:root {
+  --dark-blue1: hsl(217, 28%, 15%);
+  --dark-blue2: hsl(218, 28%, 13%);
+  --dark-blue3: hsl(216, 53%, 9%);
+  --dark-blue4: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --light-red: hsl(0, 100%, 63%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--dark-blue1);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+
+nav img {
+  flex: 1;
+}
+
+nav div {
+  flex: 3;
+} */
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  place-items: center;
+  margin: 30px 10px;
+}
+
+nav div {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+nav img {
+  width: 100px;
+}
+
+/* ============================ Section1 =================  */
+
+.section1 img {
+  width: 90%;
+  max-width: 400px;
+}
+
+.section1 {
+  background-image: url("./images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+@media (min-width: 768px) {
+  .section1 {
+    background-image: url("./images/bg-curvy-desktop.svg");
+  }
+}
+
+.section1 div {
+  color: var(--white);
+  text-align: center;
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+.section1 button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 10px;
+  width: 150px;
+  border-radius: 25px;
+  border: none;
+}
+
+/* psuedo selector  */
+
+.section1 button:hover {
+  background-color: var(--cyan);
+}
+
+/* ==================== Section2 ==================  */
+
+.section2 {
+  background-color: var(--dark-blue2);
+  padding: 60px 0;
+}
+
+.inner-section2 {
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .inner-section2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.inner-section2 {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* ==================== Section3 ==================  */
+
+/* ==================== Section4 ==================  */
+
+.section4 {
+  color: var(--white);
+  background-color: var(--dark-blue2);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 60px 200px;
+  position: relative;
+}
+
+.section4-items {
+  background-color: var(--dark-blue4);
+  border-radius: 8px;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.section4-items > div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 20px;
+  place-items: center;
+  /* margin-top: 40px; */
+  padding-top: 40px;
+}
+
+.h3andp {
+  width: 100%;
+}
+
+.section4-items img {
+  width: 60px;
+  border-radius: 100px;
+}
+
+.quotes {
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .section4 {
+    flex-direction: row;
+  }
+}
+
+/* ==================== Footer ==================  */
+
+footer {
+  background-color: var(--dark-blue3);
+  color: var(--white);
+  position: relative;
+  padding-top: 200px;
+}
+
+.top-part {
+  padding: 20px 40px;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--dark-blue1);
+  position: absolute;
+  top: -150px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.top-part h3,
+.top-part p {
+  padding-bottom: 20px;
+}
+
+.top-part input {
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.top-part button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: var(--cyan);
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .inputandbutton {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+}
